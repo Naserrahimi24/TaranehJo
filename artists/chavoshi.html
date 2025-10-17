@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محسن چاوشی - ترانه جو (پلیر اسپاتیفای)</title>
+    <link rel="stylesheet" href="persian.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn"><i class="fas fa-arrow-right-long"></i></a>
+    <div class="container">
+        <section class="artist-header">
+            <img src="../images/chavoshi.jpg" alt="محسن چاوشی" class="artist-image">
+            <div class="artist-info">
+                <h1>محسن چاوشی</h1>
+                <p>خواننده، آهنگساز و تنظیم‌کننده موسیقی پاپ و راک ایرانی <a href="#biography" class="bio-link">بیوگرافی</a></p>
+                <div class="social-stats">
+                    <button id="follow-btn" class="follow-btn">دنبال کردن</button>
+                    <span class="stat"><i class="fas fa-users"></i> <span id="followers-count">0</span> دنبال‌کننده</span>
+                    <span class="stat"><i class="fas fa-heart"></i> <span id="total-likes">0</span> لایک کل</span>
+                    <span class="stat"><i class="fas fa-play"></i> <span id="total-plays">0</span> پخش کل</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="song-list">
+            <!-- آهنگ اول ثابت -->
+            <div class="song-item" data-url="../music/chavoshi/Afsar Ft Sina Sarlak Sina Sarlak, Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>افسر (فت سینا سرلک)</h4>
+                    <p>محسن چاوشی و سینا سرلک <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Afsar Ft Sina Sarlak Sina Sarlak, Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <!-- فهرست آهنگ‌ها -->
+            <div class="song-item" data-url="../music/chavoshi/Amoo Zanjir Baf Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>عموزنجیرباف</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Amoo Zanjir Baf Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Band Baz Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>بندباز</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Band Baz Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Beraghsa Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>برقصا</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Beraghsa Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Bist Hezar Arezoo Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>بیست هزار آرزو</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Bist Hezar Arezoo Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Che Shod Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>چه شد</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Che Shod Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Del Ey Del Sina Sarlak, Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>دل ای دل</h4>
+                    <p>محسن چاوشی و سینا سرلک <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Del Ey Del Sina Sarlak, Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Delbar Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>دلبر</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Delbar Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Divooneh Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>دیوانه</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Divooneh Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Ey Darigha Sina Sarlak, Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>ای دریغا</h4>
+                    <p>محسن چاوشی و سینا سرلک <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Ey Darigha Sina Sarlak, Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Fandake Tabdar Sina Sarlak, Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>فندک تبدار</h4>
+                    <p>محسن چاوشی و سینا سرلک <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Fandake Tabdar Sina Sarlak, Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Ghatar New Version Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>قطار (ورژن جدید)</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Ghatar New Version Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Ghoraze Chin New Version Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>قرض‌الحسین (ورژن جدید)</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Ghoraze Chin New Version Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Goldoon Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>گلدون</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Goldoon Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Halalam Kon Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>حلالم کن</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Halalam Kon Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Hamgonah Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>همگناه</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Hamgonah Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Hamkhaab Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>همخواب</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Hamkhaab Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Harmless Ruler Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>حاکم بی‌زیان</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Harmless Ruler Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Havam Dobare Pase Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>هوام دوباره پسه</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Havam Dobare Pase Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Jome Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>جمعه</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Jome Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Joorchin Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>جورچین</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Joorchin Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Kash Nadideh Boodamet Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>کاش ندیده بودمت</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Kash Nadideh Boodamet Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Khodahafezi Talkh Shahrzad Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>خداحافظی تلخ (شهرزاد)</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Khodahafezi Talkh Shahrzad Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Khouzestan Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>خوزستان</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Khouzestan Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Kojaei Sina Sarlak, Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>کجایی</h4>
+                    <p>محسن چاوشی و سینا سرلک <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Kojaei Sina Sarlak, Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Mah Pishooni Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>ماه پیشونی</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Mah Pishooni Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Maleka Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>ملکا</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Maleka Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Mariz Hali Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>مریض حالی</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Mariz Hali Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Maslakh Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>مسلخ</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Maslakh Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Naavak Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>ناوک</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Naavak Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Ou Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>او</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Ou Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Poshte Sahneye Zendegi Omid Ameri, Farzad Farzin, Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>پشت صحنه زندگی</h4>
+                    <p>محسن چاوشی، امید آمری و فرژاد فرزین <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Poshte Sahneye Zendegi Omid Ameri, Farzad Farzin, Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Seid Jegar Khasteh Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>سید جگر خسته</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Seid Jegar Khasteh Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Shabi Ke Mah Kamel Shod Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>شبی که ماه کامل شد</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Shabi Ke Mah Kamel Shod Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Shahrzad Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>شهرزاد</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Shahrzad Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Sharhe Alef Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>شرحه الف</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Sharhe Alef Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Sheddate Meydan Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>شدت میدان</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Sheddate Meydan Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Taghe Soraya Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>طاق سرایا</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Taghe Soraya Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Zamire Khodsar Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>زمیره خودسر</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Zamire Khodsar Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/chavoshi/Zendan Mohsen Chavoshi.mp3">
+                <div class="song-info">
+                    <h4>زندان</h4>
+                    <p>محسن چاوشی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/chavoshi/Zendan Mohsen Chavoshi.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+        </div>
+
+        <section id="biography" class="biography-section">
+            <h2>بیوگرافی محسن چاوشی</h2>
+            <p>محسن چاوشی حسابی (متولد ۸ مرداد ۱۳۵۸ در خرمشهر) خواننده، آهنگساز و تنظیم‌کننده برجسته موسیقی پاپ و راک ایرانی است. او فعالیت هنری خود را از اواخر دهه ۱۳۷۰ آغاز کرد و با آلبوم «نفرین» به شهرت رسید. چاوشی با صدای منحصربه‌فرد و اشعار عمیق و احساسی‌اش، آهنگ‌های زیادی مانند «کجا باید برم»، «شهرزاد» و «همگناه» را اجرا کرده که اغلب تم‌های عاشقانه، اجتماعی و فلسفی دارند. او با همکاری هنرمندانی مانند سینا سرلک و فرژاد فرزین، آثار موفقی تولید کرده است. چاوشی به دلیل سبک خاص و عدم حضور در کنسرت‌های عمومی، به عنوان یکی از رمزآلودترین خوانندگان ایرانی شناخته می‌شود. او جوایز متعددی دریافت کرده و آلبوم‌هایش مانند «ابراهیم» و «بی‌نام» فروش بالایی داشته‌اند. چاوشی همچنان فعال است و طرفداران زیادی در میان ایرانیان دارد.</p>
+        </section>
+    </div>
+
+    <div id="spotify-player" class="spotify-player">
+        <button id="close-player" class="close-btn"><i class="fas fa-times"></i></button>
+        <div class="player-cover">
+            <img id="player-cover" src="../images/chavoshi.jpg" alt="کاور">
+        </div>
+        <div class="player-meta">
+            <h4 id="player-title">عنوان آهنگ</h4>
+            <p id="player-artist">خواننده</p>
+            <div class="waveform" id="waveform"></div>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-backward"></i></button>
+            <button id="play-toggle"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input id="progress" type="range" min="0" max="100" value="0" class="progress">
+            <span id="duration">0:00</span>
+        </div>
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="1" class="volume">
+        </div>
+        <a class="download-btn" id="player-download" href="#" download><i class="fas fa-download"></i></a>
+    </div>
+
+    <button id="scroll-top" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <script src="persian.js"></script>
+</body>
+</html>

@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گوگوش - ترانه جو (پلیر اسپاتیفای)</title>
+    <link rel="stylesheet" href="persian.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn"><i class="fas fa-arrow-right-long"></i></a>
+    <div class="container">
+        <section class="artist-header">
+            <img src="../images/googoosh.jpg" alt="گوگوش" class="artist-image">
+            <div class="artist-info">
+                <h1>گوگوش</h1>
+                <p>خواننده مطرح موسیقی پاپ ایران <a href="#biography" class="bio-link">بیوگرافی</a></p>
+                <div class="social-stats">
+                    <button id="follow-btn" class="follow-btn">دنبال کردن</button>
+                    <span class="stat"><i class="fas fa-users"></i> <span id="followers-count">0</span> دنبال‌کننده</span>
+                    <span class="stat"><i class="fas fa-heart"></i> <span id="total-likes">0</span> لایک کل</span>
+                    <span class="stat"><i class="fas fa-play"></i> <span id="total-plays">0</span> پخش کل</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="song-list">
+            <!-- آهنگ اول ثابت -->
+            <div class="song-item" data-url="../music/googoosh/Aabi Googoosh.mp3">
+                <div class="song-info">
+                    <h4>آبی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Aabi Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <!-- فهرست آهنگ‌ها -->
+            <div class="song-item" data-url="../music/googoosh/Aasheghaneh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>عاشقانه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Aasheghaneh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Aftabi Googoosh.mp3">
+                <div class="song-info">
+                    <h4>آفتابی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Aftabi Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Age Bemouni Age Namouni Googoosh.mp3">
+                <div class="song-info">
+                    <h4>اگه بمونی اگه نمونی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Age Bemouni Age Namouni Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ajab Jaei Googoosh.mp3">
+                <div class="song-info">
+                    <h4>اجب جایی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ajab Jaei Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Aks Khosoosi Googoosh.mp3">
+                <div class="song-info">
+                    <h4>عکس خصوصی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Aks Khosoosi Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Atashfeshan No Googoosh.mp3">
+                <div class="song-info">
+                    <h4>آتشفشان نه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Atashfeshan No Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ay Mardom Mordam Googoosh.mp3">
+                <div class="song-info">
+                    <h4>ای مردم مردم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ay Mardom Mordam Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Azizam feat. Googoosh Persian Version Ed Sheeran, Googoosh.mp3">
+                <div class="song-info">
+                    <h4>عزیزم (ورژن فارسی با اد شیران)</h4>
+                    <p>گوگوش / اد شیران <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Azizam feat. Googoosh Persian Version Ed Sheeran, Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Baaghe Bi Bargi Googoosh.mp3">
+                <div class="song-info">
+                    <h4>باغ بی‌برگی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Baaghe Bi Bargi Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Baaraan Googoosh.mp3">
+                <div class="song-info">
+                    <h4>باران</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Baaraan Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Banooye Ma Googoosh.mp3">
+                <div class="song-info">
+                    <h4>بانوی ما</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Banooye Ma Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Baraaye Man Googoosh.mp3">
+                <div class="song-info">
+                    <h4>برای من</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Baraaye Man Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Bavar Kon Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>باور کن (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Bavar Kon Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Behesht Googoosh.mp3">
+                <div class="song-info">
+                    <h4>بهشت</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Behesht Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Bein e Ma Har Chi Boode Tamoom Shode Googoosh.mp3">
+                <div class="song-info">
+                    <h4>بین ما هر چی بوده تموم شده</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Bein e Ma Har Chi Boode Tamoom Shode Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Bemoon ta bemoonm Googoosh.mp3">
+                <div class="song-info">
+                    <h4>بمون تا بمونم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Bemoon ta bemoonm Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Boosehaye Piadeh Ro Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>بوسه‌های پیاده‌رو</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Boosehaye Piadeh Ro Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Booye Safar Googoosh.mp3">
+                <div class="song-info">
+                    <h4>بوی سفر</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Booye Safar Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Che Zibaa Bood Googoosh.mp3">
+                <div class="song-info">
+                    <h4>چه زیبا بود</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Che Zibaa Bood Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Daadaashi Googoosh.mp3">
+                <div class="song-info">
+                    <h4>داداشی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Daadaashi Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Dar Emtedade Shab Googoosh.mp3">
+                <div class="song-info">
+                    <h4>در امتداد شب</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Dar Emtedade Shab Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Darde Man Googoosh.mp3">
+                <div class="song-info">
+                    <h4>درد من</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Darde Man Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Delam Khaast Googoosh.mp3">
+                <div class="song-info">
+                    <h4>دلم خواست</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Delam Khaast Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Deltangi Googoosh.mp3">
+                <div class="song-info">
+                    <h4>دلتنگی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Deltangi Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Dige Ashkam Vase Man Naz Mikone Googoosh.mp3">
+                <div class="song-info">
+                    <h4>دیگه اشکام واسه من ناز می‌کنه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Dige Ashkam Vase Man Naz Mikone Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Dige gerye delo va nemikone Googoosh.mp3">
+                <div class="song-info">
+                    <h4>دیگه گریه دل رو وا نمی‌کنه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Dige gerye delo va nemikone Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Digeh Nemigam Doostet Daram Googoosh.mp3">
+                <div class="song-info">
+                    <h4>دیگه نمی‌گم دوستت دارم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Digeh Nemigam Doostet Daram Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Doe Panjereh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>دو پنجره</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Doe Panjereh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ejaz Googoosh.mp3">
+                <div class="song-info">
+                    <h4>اعجاز</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ejaz Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Eshgh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>عشق</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Eshgh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Eshgh Yani Hameh Chiz Googoosh.mp3">
+                <div class="song-info">
+                    <h4>عشق یعنی همه چیز</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Eshgh Yani Hameh Chiz Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Fardamoon Googoosh.mp3">
+                <div class="song-info">
+                    <h4>فردامون</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Fardamoon Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Foreign Song Googoosh.mp3">
+                <div class="song-info">
+                    <h4>آهنگ خارجی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Foreign Song Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Geryeh Konam Yaa Nakonam Googoosh.mp3">
+                <div class="song-info">
+                    <h4>گریه کنم یا نکنم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Geryeh Konam Yaa Nakonam Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Gharib e Ashena  Googoosh.mp3">
+                <div class="song-info">
+                    <h4>غریب آشنا</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Gharib e Ashena  Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Gharib e Ashena Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>غریب آشنا (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Gharib e Ashena Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ghazal e Shishehei Googoosh.mp3">
+                <div class="song-info">
+                    <h4>غزل شیشه‌ای</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ghazal e Shishehei Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Gole hezar par Googoosh.mp3">
+                <div class="song-info">
+                    <h4>گل هزار پر</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Gole hezar par Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Goosheh Neshin Googoosh.mp3">
+                <div class="song-info">
+                    <h4>گوشه‌نشین</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Goosheh Neshin Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Hafteye Sepid O Siyaah Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>هفته سپید و سیاه</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Hafteye Sepid O Siyaah Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ham Seda Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>هم‌صدا (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ham Seda Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Hamseda Medley Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>هم‌صدا (مدلی)</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Hamseda Medley Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Harf Googoosh.mp3">
+                <div class="song-info">
+                    <h4>حرف</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Harf Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Harf Shear Khani Googoosh.mp3">
+                <div class="song-info">
+                    <h4>حرف (شعر خوانی)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Harf Shear Khani Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Hayaahoo Googoosh.mp3">
+                <div class="song-info">
+                    <h4>هیاهو</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Hayaahoo Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Hejrat Shear Khani Googoosh.mp3">
+                <div class="song-info">
+                    <h4>هجرت (شعر خوانی)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Hejrat Shear Khani Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Hesse Mobham Googoosh.mp3">
+                <div class="song-info">
+                    <h4>حس مبهم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Hesse Mobham Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Instrumental Googoosh.mp3">
+                <div class="song-info">
+                    <h4>اینسترومنتال</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Instrumental Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/International Medly Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>مدلی بین‌المللی</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/International Medly Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Jaadeh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>جاده</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Jaadeh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Jangale Shesh O Hasht Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>جنگل شش و هشت</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Jangale Shesh O Hasht Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Jom Jomak Barge Khazoon Googoosh.mp3">
+                <div class="song-info">
+                    <h4>جم جمک برگ خزون</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Jom Jomak Barge Khazoon Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Kaj Kolah khan Remix Googoosh.mp3">
+                <div class="song-info">
+                    <h4>کج کلاه خان (ریمیکس)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Kaj Kolah khan Remix Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Kash Man Ja Ye To Boodam Googoosh.mp3">
+                <div class="song-info">
+                    <h4>کاش من جای تو بودم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Kash Man Ja Ye To Boodam Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Katibe Googoosh.mp3">
+                <div class="song-info">
+                    <h4>کتیبه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Katibe Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Khaake Asir Googoosh.mp3">
+                <div class="song-info">
+                    <h4>خاک اسیر</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Khaake Asir Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Khaake Asir Instrumental Googoosh.mp3">
+                <div class="song-info">
+                    <h4>خاک اسیر (اینسترومنتال)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Khaake Asir Instrumental Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Khoobeh Khoob Googoosh.mp3">
+                <div class="song-info">
+                    <h4>خوبه خوب</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Khoobeh Khoob Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Koocheha Googoosh.mp3">
+                <div class="song-info">
+                    <h4>کوچه‌ها</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Koocheha Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Koocheye Lokht Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>کوچه لخت</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Koocheye Lokht Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Kooh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>کوه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Kooh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Maahi Siaah Koochooloo Googoosh.mp3">
+                <div class="song-info">
+                    <h4>ماهی سیاه کوچولو</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Maahi Siaah Koochooloo Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Makhloogh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مخلوق</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Makhloogh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Man Hamoon Iranam Googoosh.mp3">
+                <div class="song-info">
+                    <h4>من همون ایرانم</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Man Hamoon Iranam Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Man Khab Dideham Googoosh.mp3">
+                <div class="song-info">
+                    <h4>من خواب دیده‌ام</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Man Khab Dideham Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Man o To Googoosh.mp3">
+                <div class="song-info">
+                    <h4>من و تو</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Man o To Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Mano Gonjeshkaye Khooneh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>من و گنجشکای خونه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Mano Gonjeshkaye Khooneh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Maraa Bas Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مرا بس</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Maraa Bas Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Marham Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مرحم (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Marham Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/mojeze gar Googoosh.mp3">
+                <div class="song-info">
+                    <h4>معجزه‌گر</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/mojeze gar Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Monaajaat Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مناجات</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Monaajaat Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Mordab Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مرداب</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Mordab Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Mordab Live Hasan Shamaizadeh, Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مرداب (لایو)</h4>
+                    <p>گوگوش / حسن شماعی‌زاده <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Mordab Live Hasan Shamaizadeh, Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Morgh Sahar Googoosh.mp3">
+                <div class="song-info">
+                    <h4>مرغ سحر</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Morgh Sahar Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Mosalas Khatereha Hasan Shamaizadeh, Googoosh, Ardalan Sarfaraz.mp3">
+                <div class="song-info">
+                    <h4>مثلث خاطره‌ها</h4>
+                    <p>گوگوش / حسن شماعی‌زاده / اردلان سرفراز <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Mosalas Khatereha Hasan Shamaizadeh, Googoosh, Ardalan Sarfaraz.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Nagoo Bedroud Googoosh.mp3">
+                <div class="song-info">
+                    <h4>نگو بدرود</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Nagoo Bedroud Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Nazanine Bigharar Googoosh.mp3">
+                <div class="song-info">
+                    <h4>نازنین بی‌قرار</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Nazanine Bigharar Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Nejatam Bedeh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>نجاتم بده</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Nejatam Bedeh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Nemiad Hosein Aerial Mashup Googoosh, Hosein Aerial.mp3">
+                <div class="song-info">
+                    <h4>نمیاد (ماشاپ با حسین آریال)</h4>
+                    <p>گوگوش / حسین آریال <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Nemiad Hosein Aerial Mashup Googoosh, Hosein Aerial.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Nemidouni Googoosh.mp3">
+                <div class="song-info">
+                    <h4>نمی‌دونی</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Nemidouni Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Niloufare Abi Medley Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>نیلوفر آبی (مدلی)</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Niloufare Abi Medley Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Noghteye Payan Googoosh.mp3">
+                <div class="song-info">
+                    <h4>نقطه پایان</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Noghteye Payan Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Parandeh Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>پرنده (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Parandeh Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Pishkesh Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>پیشکش (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Pishkesh Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Pol Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>پل (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Pol Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Porsesh Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>پرسش (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Porsesh Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ramey Gomgashteh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>رامی گمگشته</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ramey Gomgashteh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Refaghat Googoosh, Martik.mp3">
+                <div class="song-info">
+                    <h4>رفاقت</h4>
+                    <p>گوگوش / مارتیک <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Refaghat Googoosh, Martik.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Rishe Googoosh.mp3">
+                <div class="song-info">
+                    <h4>ریشه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Rishe Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Sahneh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>صحنه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Sahneh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Sangareh Bee Sang Googoosh.mp3">
+                <div class="song-info">
+                    <h4>سنگاره بی سنگ</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Sangareh Bee Sang Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Sedaaye Sabze Eshgh Googoosh.mp3">
+                <div class="song-info">
+                    <h4>صدای سبز عشق</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Sedaaye Sabze Eshgh Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Setare Ay Setare Googoosh.mp3">
+                <div class="song-info">
+                    <h4>ستاره آی ستاره</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Setare Ay Setare Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Sezaavaar Googoosh.mp3">
+                <div class="song-info">
+                    <h4>سزاوار</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Sezaavaar Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Shabe Bi Man Googoosh.mp3">
+                <div class="song-info">
+                    <h4>شب بی من</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Shabe Bi Man Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Shabe Sepid Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>شب سپید</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Shabe Sepid Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Shahed Googoosh.mp3">
+                <div class="song-info">
+                    <h4>شاهد</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Shahed Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Shak Mikonam Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>شک می‌کنم</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Shak Mikonam Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Shenasnameyeh Man Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>شناسنامه من</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Shenasnameyeh Man Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Shenhaye Saheli Ali fard Remix Googoosh.mp3">
+                <div class="song-info">
+                    <h4>شن‌های ساحلی (ریمیکس علی فرد)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Shenhaye Saheli Ali fard Remix Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Sogand Googoosh.mp3">
+                <div class="song-info">
+                    <h4>سوگند</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Sogand Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Talagh Googoosh, Mehrdad Asemani.mp3">
+                <div class="song-info">
+                    <h4>طلاق</h4>
+                    <p>گوگوش / مهرداد آسمانی <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Talagh Googoosh, Mehrdad Asemani.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Talagh Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>طلاق (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Talagh Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Talagh Remix Googoosh.mp3">
+                <div class="song-info">
+                    <h4>طلاق (ریمیکس)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Talagh Remix Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/To Agar Man Agar Googoosh.mp3">
+                <div class="song-info">
+                    <h4>تو اگر من اگر</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/To Agar Man Agar Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Vaghteshe Googoosh.mp3">
+                <div class="song-info">
+                    <h4>وقتشه</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Vaghteshe Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Ye Harfaee Live Googoosh.mp3">
+                <div class="song-info">
+                    <h4>یه حرفایی (لایو)</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Ye Harfaee Live Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/googoosh/Zartosht Googoosh.mp3">
+                <div class="song-info">
+                    <h4>زرتشت</h4>
+                    <p>گوگوش <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/googoosh/Zartosht Googoosh.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+        </div>
+
+        <section id="biography" class="biography-section">
+            <h2>بیوگرافی گوگوش</h2>
+            <p>فائقه آتشین، معروف به گوگوش، در ۱۵ اردیبهشت ۱۳۲۹ (۵ مه ۱۹۵۰) در تهران متولد شد. او از کودکی در زمینه موسیقی و بازیگری فعالیت داشت و در دهه ۱۳۴۰ و ۱۳۵۰ به عنوان یکی از محبوب‌ترین خوانندگان و بازیگران ایرانی شناخته شد. گوگوش با آهنگ‌های پاپ و سنتی ایرانی مانند "دو پنجره" و "مرداب" به شهرت رسید. پس از انقلاب اسلامی ۱۳۵۷، فعالیت‌های هنری او در ایران ممنوع شد و برای سال‌ها سکوت کرد. در سال ۱۳۷۹ (۲۰۰۰) به ایالات متحده مهاجرت کرد و فعالیت‌های خود را از سر گرفت. گوگوش بیش از ۲۰ آلبوم منتشر کرده و کنسرت‌های متعددی در سراسر جهان برگزار کرده است. صدای منحصربه‌فرد و سبک عاطفی او، او را به نماد موسیقی پاپ ایرانی تبدیل کرده است. او با هنرمندانی مانند حسن شماعی‌زاده و مهرداد آسمانی همکاری کرده و جوایز بین‌المللی دریافت کرده است. گوگوش همچنان فعال است و طرفداران زیادی در میان ایرانیان دارد. او نه تنها به عنوان خواننده، بلکه به عنوان یک آیکون فرهنگی شناخته می‌شود.</p>
+        </section>
+    </div>
+
+    <div id="spotify-player" class="spotify-player">
+        <button id="close-player" class="close-btn"><i class="fas fa-times"></i></button>
+        <div class="player-cover">
+            <img id="player-cover" src="../images/googoosh.jpg" alt="کاور">
+        </div>
+        <div class="player-meta">
+            <h4 id="player-title">عنوان آهنگ</h4>
+            <p id="player-artist">خواننده</p>
+            <div class="waveform" id="waveform"></div>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-backward"></i></button>
+            <button id="play-toggle"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input id="progress" type="range" min="0" max="100" value="0" class="progress">
+            <span id="duration">0:00</span>
+        </div>
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="1" class="volume">
+        </div>
+        <a class="download-btn" id="player-download" href="#" download><i class="fas fa-download"></i></a>
+    </div>
+
+    <button id="scroll-top" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <script src="persian.js"></script>
+</body>
+</html>

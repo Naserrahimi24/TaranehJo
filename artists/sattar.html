@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ستار - ترانه جو (پلیر اسپاتیفای)</title>
+    <link rel="stylesheet" href="persian.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn"><i class="fas fa-arrow-right-long"></i></a>
+    <div class="container">
+        <section class="artist-header">
+            <img src="../images/sattar.jpg" alt="ستار" class="artist-image">
+            <div class="artist-info">
+                <h1>ستار</h1>
+                <p>خواننده، آهنگساز و نوازنده موسیقی پاپ ایرانی <a href="#biography" class="bio-link">بیوگرافی</a></p>
+                <div class="social-stats">
+                    <button id="follow-btn" class="follow-btn">دنبال کردن</button>
+                    <span class="stat"><i class="fas fa-users"></i> <span id="followers-count">0</span> دنبال‌کننده</span>
+                    <span class="stat"><i class="fas fa-heart"></i> <span id="total-likes">0</span> لایک کل</span>
+                    <span class="stat"><i class="fas fa-play"></i> <span id="total-plays">0</span> پخش کل</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="song-list">
+            <!-- آهنگ اول ثابت -->
+            <div class="song-item" data-url="../music/sattar/Golh Sattar.mp3">
+                <div class="song-info">
+                    <h4>گل</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Golh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <!-- فهرست آهنگ‌ها -->
+            <div class="song-item" data-url="../music/sattar/Golhaye Kaghazi Sattar.mp3">
+                <div class="song-info">
+                    <h4>گل‌های کاغذی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Golhaye Kaghazi Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Gomshodeh Sattar.mp3">
+                <div class="song-info">
+                    <h4>گمشده</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Gomshodeh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Hamsafar Ft Kamyr Dj Mamsi Remix Sattar.mp3">
+                <div class="song-info">
+                    <h4>همسفر (ریمیکس کمیر و دی‌جی مامسی)</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Hamsafar Ft Kamyr Dj Mamsi Remix Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Hamsafar Sattar.mp3">
+                <div class="song-info">
+                    <h4>همسفر</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Hamsafar Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Hamsafare Khatereha Sattar.mp3">
+                <div class="song-info">
+                    <h4>همسفر خاطره‌ها</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Hamsafare Khatereha Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Hamzad Sattar.mp3">
+                <div class="song-info">
+                    <h4>همزاد</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Hamzad Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Havaye Taze Sattar.mp3">
+                <div class="song-info">
+                    <h4>هوای تازه</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Havaye Taze Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Janeh Shirinam Sattar.mp3">
+                <div class="song-info">
+                    <h4>جان شیرینم</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Janeh Shirinam Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Khat Bekesh Sattar.mp3">
+                <div class="song-info">
+                    <h4>خط بکش</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Khat Bekesh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Khat Sattar.mp3">
+                <div class="song-info">
+                    <h4>خط</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Khat Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Khaterate Koodaki Sattar.mp3">
+                <div class="song-info">
+                    <h4>خاطرات کودکی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Khaterate Koodaki Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Khatere Sattar.mp3">
+                <div class="song-info">
+                    <h4>خاطره</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Khatere Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Khatereh Sattar.mp3">
+                <div class="song-info">
+                    <h4>خاطره</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Khatereh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Khorshid Khanoom Sattar.mp3">
+                <div class="song-info">
+                    <h4>خورشید خانم</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Khorshid Khanoom Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Koja Bood Sattar.mp3">
+                <div class="song-info">
+                    <h4>کجا بود</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Koja Bood Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Koja Sattar.mp3">
+                <div class="song-info">
+                    <h4>کجا</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Koja Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Kooh E Ghorour Sattar.mp3">
+                <div class="song-info">
+                    <h4>کوه غرور</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Kooh E Ghorour Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Kou Aan Shabha Sattar.mp3">
+                <div class="song-info">
+                    <h4>کو آن شب‌ها</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Kou Aan Shabha Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Koucheh Sattar.mp3">
+                <div class="song-info">
+                    <h4>کوچه</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Koucheh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Leonardo A Time For Us Sattar.mp3">
+                <div class="song-info">
+                    <h4>لئوناردو (زمان برای ما)</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Leonardo A Time For Us Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Maht Sattar.mp3">
+                <div class="song-info">
+                    <h4>مهت</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Maht Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Mahtab Sattar.mp3">
+                <div class="song-info">
+                    <h4>مهتاب</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Mahtab Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Man Az Rouze Azal Sattar.mp3">
+                <div class="song-info">
+                    <h4>من از روز ازل</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Man Az Rouze Azal Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Man Sattar.mp3">
+                <div class="song-info">
+                    <h4>من</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Man Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Mano Ghoroubo Jadeh Sattar.mp3">
+                <div class="song-info">
+                    <h4>من و غروب جاده</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Mano Ghoroubo Jadeh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Masti Sattar.mp3">
+                <div class="song-info">
+                    <h4>مستی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Masti Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Mita Sattar.mp3">
+                <div class="song-info">
+                    <h4>میتا</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Mita Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Mitarsam Sattar.mp3">
+                <div class="song-info">
+                    <h4>می‌ترسم</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Mitarsam Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Mojasameh Sattar.mp3">
+                <div class="song-info">
+                    <h4>مجسمه</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Mojasameh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Motasel Delam Tang Oumad, Cheshm Balouti Sattar.mp3">
+                <div class="song-info">
+                    <h4>متصل دلم تنگ اومد، چشم بلوطی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Motasel Delam Tang Oumad, Cheshm Balouti Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Naghshe Man Chera Sattar.mp3">
+                <div class="song-info">
+                    <h4>نقشه من چرا</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Naghshe Man Chera Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Niloufar Sattar.mp3">
+                <div class="song-info">
+                    <h4>نیلوفر</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Niloufar Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Norooz Music Sattar.mp3">
+                <div class="song-info">
+                    <h4>موسیقی نوروز</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Norooz Music Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Oustuoreh Sattar.mp3">
+                <div class="song-info">
+                    <h4>اسطوره</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Oustuoreh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Panjereh Sattar.mp3">
+                <div class="song-info">
+                    <h4>پنجره</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Panjereh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Parvanegi Sattar.mp3">
+                <div class="song-info">
+                    <h4>پروانگی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Parvanegi Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Rafti O Namyoumdi Sattar.mp3">
+                <div class="song-info">
+                    <h4>رفتی و نیامدی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Rafti O Namyoumdi Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Ramz Sattar.mp3">
+                <div class="song-info">
+                    <h4>رمز</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Ramz Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Raze Sham Sattar.mp3">
+                <div class="song-info">
+                    <h4>راز شام</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Raze Sham Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Saghi Sattar.mp3">
+                <div class="song-info">
+                    <h4>ساقی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Saghi Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Setareh Bazi Sattar.mp3">
+                <div class="song-info">
+                    <h4>ستاره‌بازی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Setareh Bazi Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Shahzadeh Sattar.mp3">
+                <div class="song-info">
+                    <h4>شاهزاده</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Shahzadeh Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Shame Nimehjoun Sattar.mp3">
+                <div class="song-info">
+                    <h4>شام نیمه‌جون</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Shame Nimehjoun Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Speak Softly Love Eshgh Man Shirin Begoo Sattar.mp3">
+                <div class="song-info">
+                    <h4>عشق من شیرین بگو (سخن نرم بگو)</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Speak Softly Love Eshgh Man Shirin Begoo Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Ta Toro Didam Sattar.mp3">
+                <div class="song-info">
+                    <h4>تا تو رو دیدم</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Ta Toro Didam Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Taskin Sattar.mp3">
+                <div class="song-info">
+                    <h4>تسکین</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Taskin Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Tavallode Bahar Sattar.mp3">
+                <div class="song-info">
+                    <h4>تولد بهار</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Tavallode Bahar Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Yek Nafas Sattar.mp3">
+                <div class="song-info">
+                    <h4>یک نفس</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Yek Nafas Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/sattar/Zendooneh Deltangi Sattar.mp3">
+                <div class="song-info">
+                    <h4>زندونه دلتنگی</h4>
+                    <p>ستار <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/sattar/Zendooneh Deltangi Sattar.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+        </div>
+
+        <section id="biography" class="biography-section">
+            <h2>بیوگرافی ستار</h2>
+            <p>ستار (با نام کامل حسن ستار، متولد ۲۸ آبان ۱۳۲۸ در تهران) یکی از برجسته‌ترین خوانندگان موسیقی پاپ و سنتی ایرانی است که بیش از پنج دهه فعالیت هنری دارد. او با صدای گرم و سبک احساسی خود، جایگاه ویژه‌ای در موسیقی ایرانی به دست آورده است. ستار پیش از انقلاب با آهنگ‌هایی مانند «همسفر» و «شام نیمه‌جون» به شهرت رسید و پس از مهاجرت به ایالات متحده، فعالیت خود را در لس‌آنجلس ادامه داد. آثار او شامل آلبوم‌های متعددی از جمله «همسفر»، «ستاره‌بازی» و «گل‌های کاغذی» است که ترکیبی از موسیقی عاشقانه و نوستالژیک را ارائه می‌دهند. همکاری او با هنرمندانی مانند کمیر و دی‌جی مامسی در ریمیکس‌ها و اجرای قطعات کلاسیک مانند «عشق من شیرین بگو» نشان‌دهنده تنوع و تطبیق‌پذیری او در موسیقی است. ستار به دلیل سبک منحصربه‌فرد و توانایی در انتقال احساسات عمیق، یکی از ماندگارترین چهره‌های موسیقی ایرانی محسوب می‌شود.</p>
+        </section>
+    </div>
+
+    <div id="spotify-player" class="spotify-player">
+        <button id="close-player" class="close-btn"><i class="fas fa-times"></i></button>
+        <div class="player-cover">
+            <img id="player-cover" src="../images/sattar.jpg" alt="کاور">
+        </div>
+        <div class="player-meta">
+            <h4 id="player-title">عنوان آهنگ</h4>
+            <p id="player-artist">خواننده</p>
+            <div class="waveform" id="waveform"></div>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-backward"></i></button>
+            <button id="play-toggle"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input id="progress" type="range" min="0" max="100" value="0" class="progress">
+            <span id="duration">0:00</span>
+        </div>
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="1" class="volume">
+        </div>
+        <a class="download-btn" id="player-download" href="#" download><i class="fas fa-download"></i></a>
+    </div>
+
+    <button id="scroll-top" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <script src="persian.js"></script>
+</body>
+</html>

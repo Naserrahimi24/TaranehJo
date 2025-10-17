@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حامیم - ترانه جو (پلیر اسپاتیفای)</title>
+    <link rel="stylesheet" href="persian.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn"><i class="fas fa-arrow-right-long"></i></a>
+    <div class="container">
+        <section class="artist-header">
+            <img src="../images/haamim.jpg" alt="حامیم" class="artist-image">
+            <div class="artist-info">
+                <h1>حامیم</h1>
+                <p>خواننده و آهنگساز موسیقی پاپ ایرانی <a href="#biography" class="bio-link">بیوگرافی</a></p>
+                <div class="social-stats">
+                    <button id="follow-btn" class="follow-btn">دنبال کردن</button>
+                    <span class="stat"><i class="fas fa-users"></i> <span id="followers-count">0</span> دنبال‌کننده</span>
+                    <span class="stat"><i class="fas fa-heart"></i> <span id="total-likes">0</span> لایک کل</span>
+                    <span class="stat"><i class="fas fa-play"></i> <span id="total-plays">0</span> پخش کل</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="song-list">
+            <!-- آهنگ اول ثابت -->
+            <div class="song-item" data-url="../music/haamim/Avalash Haamim.mp3">
+                <div class="song-info">
+                    <h4>اولش</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Avalash Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <!-- فهرست آهنگ‌ها -->
+            <div class="song-item" data-url="../music/haamim/Ay Setareh Ali Sattari Remix Haamim.mp3">
+                <div class="song-info">
+                    <h4>آی ستاره (ریمیکس علی ستاری)</h4>
+                    <p>حامیم، علی ستاری <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Ay Setareh Ali Sattari Remix Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Ay setareh Guitar Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>آی ستاره (نسخه گیتار)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Ay setareh Guitar Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/ay setareh Haamim.mp3">
+                <div class="song-info">
+                    <h4>آی ستاره</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/ay setareh Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Az Ghasd Haamim.mp3">
+                <div class="song-info">
+                    <h4>از قصد</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Az Ghasd Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Ba To Inam Haamim.mp3">
+                <div class="song-info">
+                    <h4>با تو اینم</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Ba To Inam Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Baladam Boodi Haamim.mp3">
+                <div class="song-info">
+                    <h4>بلدم بودی</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Baladam Boodi Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Eshghe Ghadimi Haamim.mp3">
+                <div class="song-info">
+                    <h4>عشق قدیمی</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Eshghe Ghadimi Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Eshghe Ghadimi Piano Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>عشق قدیمی (نسخه پیانو)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Eshghe Ghadimi Piano Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Eshghesho Dari Haamim.mp3">
+                <div class="song-info">
+                    <h4>عشقشو داری</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Eshghesho Dari Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Ghalbe Mani Haamim.mp3">
+                <div class="song-info">
+                    <h4>قلب منی</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Ghalbe Mani Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Hanoozam Haamim.mp3">
+                <div class="song-info">
+                    <h4>هنوزم</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Hanoozam Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/In Hame Adam Guitar Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>این همه آدم (نسخه گیتار)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/In Hame Adam Guitar Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/In Hame Adam Haamim.mp3">
+                <div class="song-info">
+                    <h4>این همه آدم</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/In Hame Adam Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Khonamon Haamim.mp3">
+                <div class="song-info">
+                    <h4>خونمون</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Khonamon Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Khorshid o Maah Haamim.mp3">
+                <div class="song-info">
+                    <h4>خورشید و ماه</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Khorshid o Maah Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Khorshido Mah Piano Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>خورشید و ماه (نسخه پیانو)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Khorshido Mah Piano Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Ki Mishe Man Haamim.mp3">
+                <div class="song-info">
+                    <h4>کی میشه من</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Ki Mishe Man Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Man Haamim.mp3">
+                <div class="song-info">
+                    <h4>من</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Man Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/masalan Haamim.mp3">
+                <div class="song-info">
+                    <h4>مثلاً</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/masalan Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Moroor Haamim.mp3">
+                <div class="song-info">
+                    <h4>مرور</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Moroor Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Nimeye Gomshode Haamim.mp3">
+                <div class="song-info">
+                    <h4>نیمه گمشده</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Nimeye Gomshode Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Raaze Shab Piano Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>راز شب (نسخه پیانو)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Raaze Shab Piano Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Raze Shab Haamim.mp3">
+                <div class="song-info">
+                    <h4>راز شب</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Raze Shab Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Roze Sefid Guitar Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>روز سفید (نسخه گیتار)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Roze Sefid Guitar Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Roze Sefid Haamim.mp3">
+                <div class="song-info">
+                    <h4>روز سفید</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Roze Sefid Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Shabe Akhar Haamim.mp3">
+                <div class="song-info">
+                    <h4>شب آخر</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Shabe Akhar Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Sia Sefid Concert Version Haamim.mp3">
+                <div class="song-info">
+                    <h4>سیاه سفید (نسخه کنسرت)</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Sia Sefid Concert Version Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/siyah sefid Haamim.mp3">
+                <div class="song-info">
+                    <h4>سیاه سفید</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/siyah sefid Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Taghsire Toe Haamim.mp3">
+                <div class="song-info">
+                    <h4>تقصیر توئه</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Taghsire Toe Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Yekio Daram Haamim.mp3">
+                <div class="song-info">
+                    <h4>یکیو دارم</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Yekio Daram Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="song-item" data-url="../music/haamim/Zendegi Kardam Toro Haamim.mp3">
+                <div class="song-info">
+                    <h4>زندگی کردم تورو</h4>
+                    <p>حامیم <span class="song-duration"></span></p>
+                </div>
+                <div class="song-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <a class="download-btn" href="../music/haamim/Zendegi Kardam Toro Haamim.mp3" download><i class="fas fa-download"></i></a>
+                    <span class="like-badge"><i class="fas fa-heart"></i> <span class="like-count">0</span></span>
+                </div>
+            </div>
+        </div>
+
+        <section id="biography" class="biography-section">
+            <h2>بیوگرافی حامیم</h2>
+            <p>حامیم (با نام کامل حامد موسوی) یکی از خوانندگان و آهنگسازان جوان و پرطرفدار موسیقی پاپ ایرانی است که در سال‌های اخیر با آهنگ‌های احساسی و عاشقانه‌اش مانند «سیاه سفید»، «آی ستاره» و «عشق قدیمی» به شهرت رسیده است. او با سبک خاص و صدای گیرای خود توانسته توجه مخاطبان نسل جدید را جلب کند. حامیم اغلب آهنگ‌هایش را با نسخه‌های مختلف (مانند نسخه‌های گیتار، پیانو و کنسرت) منتشر می‌کند که نشان‌دهنده خلاقیت و تنوع در آثار اوست. همکاری او با هنرمندانی مانند علی ستاری در ریمیکس‌ها و اجراهای زنده پرشور او، جایگاه او را به‌عنوان یکی از ستارگان نوظهور موسیقی پاپ ایران تثبیت کرده است. آهنگ‌های او با مضامین عاشقانه و نوستالژیک، ارتباط عمیقی با مخاطبان برقرار می‌کنند.</p>
+        </section>
+    </div>
+
+    <div id="spotify-player" class="spotify-player">
+        <button id="close-player" class="close-btn"><i class="fas fa-times"></i></button>
+        <div class="player-cover">
+            <img id="player-cover" src="../images/haamim.jpg" alt="کاور">
+        </div>
+        <div class="player-meta">
+            <h4 id="player-title">عنوان آهنگ</h4>
+            <p id="player-artist">خواننده</p>
+            <div class="waveform" id="waveform"></div>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-backward"></i></button>
+            <button id="play-toggle"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input id="progress" type="range" min="0" max="100" value="0" class="progress">
+            <span id="duration">0:00</span>
+        </div>
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="1" class="volume">
+        </div>
+        <a class="download-btn" id="player-download" href="#" download><i class="fas fa-download"></i></a>
+    </div>
+
+    <button id="scroll-top" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <script src="persian.js"></script>
+</body>
+</html>
