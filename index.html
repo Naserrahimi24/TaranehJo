@@ -8,337 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(to bottom, #1a202c, #2d3748);
-            color: #e2e8f0;
-            transition: background 0.5s ease, color 0.5s ease;
-            overscroll-behavior: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-        body.light-mode {
-            background: linear-gradient(to bottom, #f7fafc, #edf2f7);
-            color: #2d3748;
-        }
-        header {
-            padding: 0.5rem 1rem;
-        }
-        .logo {
-            font-size: 1.5rem;
-        }
-        .auth-button {
-            position: relative;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        .auth-button::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #4fd1c5;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-        .auth-button:hover::after, .auth-button:focus::after {
-            transform: translateX(0);
-        }
-        .auth-button:hover, .auth-button:focus {
-            transform: translateY(-2px);
-            color: #4fd1c5;
-        }
-        .search-bar input {
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-        }
-        .search-bar button {
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            border-radius: 8px;
-        }
-        .theme-toggle {
-            font-size: 1.2rem;
-            padding: 0.5rem;
-        }
-        .artist-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1rem;
-        }
-        .artist-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 0.5s ease forwards;
-            position: relative;
-            overflow: hidden;
-        }
-        .artist-card:nth-child(1) { animation-delay: 0.1s; }
-        .artist-card:nth-child(2) { animation-delay: 0.2s; }
-        .artist-card:nth-child(3) { animation-delay: 0.3s; }
-        .artist-card:nth-child(4) { animation-delay: 0.4s; }
-        .artist-card:nth-child(5) { animation-delay: 0.5s; }
-        .artist-card:nth-child(6) { animation-delay: 0.6s; }
-        .artist-card:nth-child(7) { animation-delay: 0.7s; }
-        .artist-card:nth-child(8) { animation-delay: 0.8s; }
-        .artist-card:nth-child(9) { animation-delay: 0.9s; }
-        .artist-card:nth-child(10) { animation-delay: 1.0s; }
-        .artist-card:nth-child(11) { animation-delay: 1.1s; }
-        .artist-card:nth-child(12) { animation-delay: 1.2s; }
-        .artist-card:nth-child(13) { animation-delay: 1.3s; }
-        .artist-card:nth-child(14) { animation-delay: 1.4s; }
-        .artist-card:nth-child(15) { animation-delay: 1.5s; }
-        .artist-card:hover, .artist-card:focus {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-        .artist-card::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(79, 209, 197, 0.2);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s ease, height 0.3s ease;
-            pointer-events: none;
-        }
-        .artist-card:active::after {
-            width: 200%;
-            height: 200%;
-        }
-        .artist-card.hidden {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            display: none;
-        }
-        .language-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            justify-items: center;
-        }
-        .language-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .language-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #4fd1c5;
-        }
-        .language-card h3 {
-            margin-top: 0.75rem;
-            font-size: 1rem;
-            text-align: center;
-            color: #e2e8f0;
-        }
-        .language-card:hover, .language-card:focus {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-        }
-        .light-mode .language-card h3 {
-            color: #2d3748;
-        }
-        .music-player {
-            backdrop-filter: blur(12px);
-            background: rgba(26, 32, 44, 0.9);
-            border-radius: 12px 12px 0 0;
-            padding: 0.75rem 1rem;
-            touch-action: manipulation;
-        }
-        .light-mode .music-player {
-            background: rgba(255, 255, 255, 0.9);
-            color: #2d3748;
-        }
-        .player-controls button {
-            font-size: 1.2rem;
-            padding: 0.5rem;
-            width: 2.5rem;
-            height: 2.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-        .player-controls button:hover, .player-controls button:focus {
-            transform: scale(1.1);
-        }
-        .queue-list {
-            transform: translateY(100%);
-            transition: transform 0.4s ease-in-out;
-        }
-        .queue-list.active {
-            transform: translateY(0);
-        }
-        .queue-item {
-            transition: background 0.2s ease, transform 0.2s ease;
-            padding: 0.75rem;
-            font-size: 0.9rem;
-        }
-        .queue-item:hover, .queue-item:focus {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateX(-5px);
-        }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 80%;
-            max-width: 320px;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(12px);
-            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
-            transform: translateX(-100%);
-            transition: transform 0.4s ease-in-out;
-            z-index: 30;
-            padding: 1rem;
-        }
-        .sidebar.active {
-            transform: translateX(0);
-        }
-        .sidebar ul li a {
-            display: block;
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
-        }
-        .sidebar ul li a:hover, .sidebar ul li a:focus {
-            background: rgba(79, 209, 197, 0.2);
-            transform: translateX(-5px);
-            color: #4fd1c5;
-        }
-        .light-mode .sidebar {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
-        }
-        .light-mode .sidebar ul li a:hover, .light-mode .sidebar ul li a:focus {
-            background: rgba(45, 55, 72, 0.1);
-            color: #2d3748;
-        }
-        .sidebar-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: #e2e8f0;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .sidebar-close:hover, .sidebar-close:focus {
-            transform: rotate(90deg);
-        }
-        .light-mode .sidebar-close {
-            color: #2d3748;
-        }
-        .sidebar-toggle {
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            z-index: 40;
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 20px;
-        }
-        .sidebar-toggle span {
-            width: 100%;
-            height: 3px;
-            background: #e2e8f0;
-            transition: background 0.3s ease;
-        }
-        .light-mode .sidebar-toggle span {
-            background: #2d3748;
-        }
-        @media (min-width: 769px) {
-            .artist-grid {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-            }
-            .language-grid {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-            }
-            .sidebar {
-                position: sticky;
-                top: 80px;
-                width: 18rem;
-                height: auto;
-                transform: translateX(0);
-                display: block !important;
-                padding: 2rem 1.5rem;
-            }
-            .sidebar-toggle, .sidebar-close {
-                display: none;
-            }
-            .logo {
-                font-size: 2rem;
-            }
-            .auth-button {
-                font-size: 1rem;
-                padding: 0.75rem 1.5rem;
-            }
-            .search-bar input, .search-bar button {
-                font-size: 1rem;
-                padding: 0.75rem 1.5rem;
-            }
-        }
-        .loading-overlay, .loading-spinner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        .loading-spinner {
-            position: absolute;
-            background: none;
-            z-index: 1000;
-        }
-        .loading-overlay.hidden, .loading-spinner.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #4fd1c5;
-            border-top: 5px solid transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen flex flex-col">
     <div class="loading-overlay" id="loading-overlay">
@@ -347,7 +17,7 @@
     <header class="bg-gray-900 shadow-lg sticky top-0 z-20 light-mode:bg-white transition-colors duration-500">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <button class="hamburger text-white text-2xl lg:hidden light-mode:text-gray-800 transition-colors duration-300" id="hamburger-menu">☰</button>
-            <h1 class="logo text-xl font-bold text-teal-400"><a href="index.html">ترانه جو</a></h1>
+            <h1 class="logo text-xl font-bold text-teal-400 sm:text-2xl"><a href="index.html">ترانه جو</a></h1>
             <div class="flex items-center space-x-2 space-x-reverse">
                 <a href="login.html" class="auth-button text-gray-300 hover:text-teal-100 light-mode:text-gray-600 light-mode:hover:text-teal-800">ورود</a>
                 <a href="register.html" class="auth-button text-gray-300 hover:text-teal-100 light-mode:text-gray-600 light-mode:hover:text-teal-800">ثبت‌نام</a>
@@ -373,7 +43,7 @@
             </div>
             <section class="artists mb-12">
                 <h2 class="text-2xl font-semibold text-teal-300 mb-4 light-mode:text-teal-600">خوانندگان محبوب</h2>
-                <div class="artist-grid grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                <div class="artist-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                     <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="moein">
                         <a href="artists/moein.html">
                             <div class="artist-image"><img src="images/moein.jpg" alt="معین" class="w-full h-40 object-cover"></div>
@@ -486,7 +156,7 @@
                         </a>
                     </div>
                     <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="benyaminbahadori">
-                        <a href="artists/benyamin-bahadori.html.html">
+                        <a href="artists/benyaminbahadori.html">
                             <div class="artist-image"><img src="images/benyaminbahadori.jpg" alt="بنیامین بهادری" class="w-full h-40 object-cover"></div>
                             <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بنیامین بهادری</h3>
                         </a>
@@ -533,224 +203,299 @@
                             <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بهنام بانی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="mohsenebrahimzadeh">
-                        <a href="artists/mohsenebrahimzadeh.html">
-                            <div class="artist-image"><img src="images/mohsenebrahimzadeh.jpg" alt="محسن ابراهیم زاده" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">محسن ابراهیم زاده</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="mehradjam">
-                        <a href="artists/mehradjam.html">
-                            <div class="artist-image"><img src="images/mehradjam.jpg" alt="مهراد جم" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">مهراد جم</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="aliyasini">
-                        <a href="artists/aliyasini.html">
-                            <div class="artist-image"><img src="images/aliyasini.jpg" alt="علی یاسینی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">علی یاسینی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="aronafshar">
-                        <a href="artists/aronafshar.html">
-                            <div class="artist-image"><img src="images/aronafshar.jpg" alt="آرون افشار" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">آرون افشار</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="majidrazavi">
-                        <a href="artists/majidrazavi.html">
-                            <div class="artist-image"><img src="images/majidrazavi.jpg" alt="مجید رضوی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">مجید رضوی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="moeinz">
-                        <a href="artists/moeinz.html">
-                            <div class="artist-image"><img src="images/moeinz.jpg" alt="معین زد" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">معین زد</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="naserzeynali">
-                        <a href="artists/naserzeynali.html">
-                            <div class="artist-image"><img src="images/naserzeynali.jpg" alt="ناصر زینلی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">ناصر زینلی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="garsharezaei">
-                        <a href="artists/garsharezaei.html">
-                            <div class="artist-image"><img src="images/garsharezaei.jpg" alt="گرشا رضایی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">گرشا رضایی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="roozbehbemani">
-                        <a href="artists/roozbehbemani.html">
-                            <div class="artist-image"><img src="images/roozbehbemani.jpg" alt="روزبه بمانی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">روزبه بمانی</h3>
-                        </a>
-                    </div>
                     <div class="load-less bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" id="load-less">
-                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">برگشت به حالت قبل</h3>
+                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کمتر</h3>
                     </div>
                 </div>
-                <h2 class="text-2xl font-semibold text-teal-300 mb-4 light-mode:text-teal-600 mt-8">موسیقی بر اساس زبان</h2>
-                <div class="language-grid">
+                <h2 class="text-2xl font-semibold text-teal-300 mb-4 light-mode:text-teal-600 mt-8">موسیقی بر اساس زبان‌ها</h2>
+                <div class="language-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                     <div class="language-card">
                         <a href="languages/arabic.html">
-                            <img src="images/arabic.jpg" alt="عربی">
-                            <h3>عربی</h3>
+                            <img src="images/arabic.jpg" alt="عربی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">عربی</h3>
                         </a>
                     </div>
                     <div class="language-card">
                         <a href="languages/english.html">
-                            <img src="images/english.jpg" alt="انگلیسی">
-                            <h3>انگلیسی</h3>
+                            <img src="images/english.jpg" alt="انگلیسی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">انگلیسی</h3>
                         </a>
                     </div>
                     <div class="language-card">
                         <a href="languages/turkish.html">
-                            <img src="images/turkish.jpg" alt="ترکی">
-                            <h3>ترکی</h3>
+                            <img src="images/turkish.jpg" alt="ترکی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">ترکی</h3>
                         </a>
                     </div>
                     <div class="language-card">
                         <a href="languages/afghan.html">
-                            <img src="images/afghan.jpg" alt="افغان">
-                            <h3>افغان</h3>
+                            <img src="images/afghan.jpg" alt="افغان" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">افغان</h3>
                         </a>
                     </div>
-                </div>
-                <h2 class="text-2xl font-semibold text-teal-300 mb-4 light-mode:text-teal-600 mt-8">ترانه تصویری</h2>
-                <div class="video-grid grid grid-cols-3 gap-4">
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="alirezaqorbani">
-                        <a href="artists/alirezaqorbani.html">
-                            <div class="artist-image"><img src="images/alirezaqorbani.jpg" alt="علیرضا قربانی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">علیرضا قربانی</h3>
+                    <div class="language-card">
+                        <a href="languages/hindi.html">
+                            <img src="images/hindi.jpg" alt="هندی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">هندی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="homayounshajarian">
-                        <a href="artists/homayounshajarian.html">
-                            <div class="artist-image"><img src="images/homayounshajarian.jpg" alt="همایون شجریان" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">همایون شجریان</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="salaraghili">
-                        <a href="artists/salaraghili.html">
-                            <div class="artist-image"><img src="images/salaraghili.jpg" alt="سالار عقیلی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">سالار عقیلی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="mohammadesfahani">
-                        <a href="artists/mohammadesfahani.html">
-                            <div class="artist-image"><img src="images/mohammadesfahani.jpg" alt="محمد اصفهانی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">محمد اصفهانی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="rezayazdani">
-                        <a href="artists/rezayazdani.html">
-                            <div class="artist-image"><img src="images/rezayazdani.jpg" alt="رضا یزدانی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">رضا یزدانی</h3>
-                        </a>
-                    </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="kavehyaghmaei">
-                        <a href="artists/kavehyaghmaei.html">
-                            <div class="artist-image"><img src="images/kavehyaghmaei.jpg" alt="کاوه یغمایی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کاوه یغمایی</h3>
-                        </a>
-                    </div>
-                    <div class="load-more-video bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" id="load-more-video">
+                    <div class="load-more bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" id="load-more-languages">
                         <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بیشتر</h3>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="mohsennamjoo">
-                        <a href="artists/mohsennamjoo.html">
-                            <div class="artist-image"><img src="images/mohsennamjoo.jpg" alt="محسن نامجو" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">محسن نامجو</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/spanish.html">
+                            <img src="images/spanish.jpg" alt="اسپانیایی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">اسپانیایی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="shahinnajafi">
-                        <a href="artists/shahinnajafi.html">
-                            <div class="artist-image"><img src="images/shahinnajafi.jpg" alt="شاهین نجفی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">شاهین نجفی</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/french.html">
+                            <img src="images/french.jpg" alt="فرانسوی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">فرانسوی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="rastakgroup">
-                        <a href="artists/rastakgroup.html">
-                            <div class="artist-image"><img src="images/rastakgroup.jpg" alt="گروه رستاک" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">گروه رستاک</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/german.html">
+                            <img src="images/german.jpg" alt="آلمانی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">آلمانی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="damahi">
-                        <a href="artists/damahi.html">
-                            <div class="artist-image"><img src="images/damahi.jpg" alt="داماهی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">داماهی</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/russian.html">
+                            <img src="images/russian.jpg" alt="روسی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">روسی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="bomrani">
-                        <a href="artists/bomrani.html">
-                            <div class="artist-image"><img src="images/bomrani.jpg" alt="بمرانی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بمرانی</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/japanese.html">
+                            <img src="images/japanese.jpg" alt="ژاپنی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">ژاپنی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="palet">
-                        <a href="artists/palet.html">
-                            <div class="artist-image"><img src="images/palet.jpg" alt="پالت" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">پالت</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/korean.html">
+                            <img src="images/korean.jpg" alt="کره‌ای" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">کره‌ای</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="chaartaar">
-                        <a href="artists/chaartaar.html">
-                            <div class="artist-image"><img src="images/chaartaar.jpg" alt="چارتار" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">چارتار</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/chinese.html">
+                            <img src="images/chinese.jpg" alt="چینی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">چینی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="armangarshasbi">
-                        <a href="artists/armangarshasbi.html">
-                            <div class="artist-image"><img src="images/armangarshasbi.jpg" alt="آرمان گرشاسبی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">آرمان گرشاسبی</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/italian.html">
+                            <img src="images/italian.jpg" alt="ایتالیایی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">ایتالیایی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="arminzarayi">
-                        <a href="artists/arminzarayi.html">
-                            <div class="artist-image"><img src="images/arminzarayi.jpg" alt="آرمین زارعی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">آرمین زارعی</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/portuguese.html">
+                            <img src="images/portuguese.jpg" alt="پرتغالی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">پرتغالی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="asefaria">
-                        <a href="artists/asefaria.html">
-                            <div class="artist-image"><img src="images/asefaria.jpg" alt="آصف آریا" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">آصف آریا</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/urdu.html">
+                            <img src="images/urdu.jpg" alt="اردو" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">اردو</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="ehsandaryadel">
-                        <a href="artists/ehsandaryadel.html">
-                            <div class="artist-image"><img src="images/ehsandaryadel.jpg" alt="احسان دریادل" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">احسان دریادل</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/bengali.html">
+                            <img src="images/bengali.jpg" alt="بنگالی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">بنگالی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="ahmadsolo">
-                        <a href="artists/ahmadsolo.html">
-                            <div class="artist-image"><img src="images/ahmadsolo.jpg" alt="احمد سلو" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">احمد سلو</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/swahili.html">
+                            <img src="images/swahili.jpeg" alt="سواحیلی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">سواحیلی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="tehi">
-                        <a href="artists/tehi.html">
-                            <div class="artist-image"><img src="images/tehi.jpg" alt="تهی" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">تهی</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/tamil.html">
+                            <img src="images/tamil.jpg" alt="تامیلی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">تامیلی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="mahranatash">
-                        <a href="artists/mahranatash.html">
-                            <div class="artist-image"><img src="images/mahranatash.jpg" alt="مهران آتش" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">مهران آتش</h3>
+                    <div class="language-card hidden">
+                        <a href="languages/thai.html">
+                            <img src="images/thai.jpg" alt="تایلندی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">تایلندی</h3>
                         </a>
                     </div>
-                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="amiraram">
-                        <a href="artists/amiraram.html">
-                            <div class="artist-image"><img src="images/amiraram.jpg" alt="امیر آرام" class="w-full h-40 object-cover"></div>
-                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">امیر آرام</h3>
+                    <div class="load-less bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" id="load-less-languages">
+                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کمتر</h3>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-semibold text-teal-300 mb-4 light-mode:text-teal-600 mt-8">خوانندگان محلی</h2>
+                <div class="local-artist-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="bandari">
+                        <a href="artists/bandari.html">
+                            <div class="artist-image"><img src="images/bandari.jpg" alt="بندری" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بندری</h3>
                         </a>
                     </div>
-                    <div class="load-less-video bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" id="load-less-video">
-                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">برگشت به حالت قبل</h3>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="balochi">
+                        <a href="artists/balochi.html">
+                            <div class="artist-image"><img src="images/balochi.jpg" alt="بلوچی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بلوچی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="bastaki">
+                        <a href="artists/bastaki.html">
+                            <div class="artist-image"><img src="images/bastaki.jpg" alt="بستکی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بستکی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="shirazi">
+                        <a href="artists/shirazi.html">
+                            <div class="artist-image"><img src="images/shirazi.jpeg" alt="شیرازی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">شیرازی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="shomali">
+                        <a href="artists/shomali.html">
+                            <div class="artist-image"><img src="images/shomali.jpg" alt="شمالی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">شمالی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="kordi">
+                        <a href="artists/kordi.html">
+                            <div class="artist-image"><img src="images/kordi.jpg" alt="کردی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کردی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="lori">
+                        <a href="artists/lori.html">
+                            <div class="artist-image"><img src="images/lori.jpg" alt="لری" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">لری</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="gilaki">
+                        <a href="artists/gilaki.html">
+                            <div class="artist-image"><img src="images/gilaki.jpg" alt="گیلکی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">گیلکی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="mazandarani">
+                        <a href="artists/mazandarani.html">
+                            <div class="artist-image"><img src="images/mazandarani.jpg" alt="مازندرانی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">مازندرانی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" data-artist="turkmeni">
+                        <a href="artists/turkmeni.html">
+                            <div class="artist-image"><img src="images/turkmeni.jpg" alt="ترکمنی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">ترکمنی</h3>
+                        </a>
+                    </div>
+                    <div class="load-more bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" id="load-more-local">
+                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بیشتر</h3>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="azari">
+                        <a href="artists/azari.html">
+                            <div class="artist-image"><img src="images/azari.jpg" alt="آذری" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">آذری</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="khorasani">
+                        <a href="artists/khorasani.html">
+                            <div class="artist-image"><img src="images/khorasani.jpg" alt="خراسانی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">خراسانی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="kermani">
+                        <a href="artists/kermani.html">
+                            <div class="artist-image"><img src="images/kermani.jpg" alt="کرمانی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کرمانی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="sistani">
+                        <a href="artists/sistani.html">
+                            <div class="artist-image"><img src="images/sistani.jpg" alt="سیستانی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">سیستانی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="yazdi">
+                        <a href="artists/yazdi.html">
+                            <div class="artist-image"><img src="images/yazdi.jpg" alt="یزدی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">یزدی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="esfahani">
+                        <a href="artists/esfahani.html">
+                            <div class="artist-image"><img src="images/esfahani.jpg" alt="اصفهانی" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">اصفهانی</h3>
+                        </a>
+                    </div>
+                    <div class="artist-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" data-artist="bakhtiari">
+                        <a href="artists/bakhtiari.html">
+                            <div class="artist-image"><img src="images/bakhtiari.jpeg" alt="بختیاری" class="w-full h-40 object-cover"></div>
+                            <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بختیاری</h3>
+                        </a>
+                    </div>
+                    <div class="load-less bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" id="load-less-local">
+                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کمتر</h3>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-semibold text-teal-300 mb-4 light-mode:text-teal-600 mt-8">قرآن</h2>
+                <div class="qari-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div class="language-card">
+                        <a href="qari/abdulbasit.html">
+                            <img src="images/abdulbasit.jpg" alt="عبدالباسط" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">عبدالباسط</h3>
+                        </a>
+                    </div>
+                    <div class="language-card">
+                        <a href="qari/menshavi.html">
+                            <img src="images/menshavi.jpg" alt="منشاوی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">منشاوی</h3>
+                        </a>
+                    </div>
+                    <div class="language-card">
+                        <a href="qari/parhizgar.html">
+                            <img src="images/parhizgar.jpg" alt="پرهیزگار" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">پرهیزگار</h3>
+                        </a>
+                    </div>
+                    <div class="language-card">
+                        <a href="qari/mishary.html">
+                            <img src="images/mishary.jpg" alt="مشاری العفاسی" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">مشاری العفاسی</h3>
+                        </a>
+                    </div>
+                    <div class="load-more bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white" id="load-more-qari">
+                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">بیشتر</h3>
+                    </div>
+                    <div class="language-card hidden">
+                        <a href="qari/sudais.html">
+                            <img src="images/sudais.jpg" alt="عبدالرحمن السدیس" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">عبدالرحمن السدیس</h3>
+                        </a>
+                    </div>
+                    <div class="language-card hidden">
+                        <a href="qari/shuraim.html">
+                            <img src="images/shuraim.jpg" alt="سعود الشریم" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">سعود الشریم</h3>
+                        </a>
+                    </div>
+                    <div class="language-card hidden">
+                        <a href="qari/ayyub.html">
+                            <img src="images/ayyub.jpg" alt="محمد ایوب" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">محمد ایوب</h3>
+                        </a>
+                    </div>
+                    <div class="language-card hidden">
+                        <a href="qari/husary.html">
+                            <img src="images/husary.jpg" alt="محمود خلیل الحصری" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-3 border-teal-400">
+                            <h3 class="mt-3 text-center text-base font-medium text-white light-mode:text-gray-800">محمود خلیل الحصری</h3>
+                        </a>
+                    </div>
+                    <div class="load-less bg-gray-800 rounded-lg overflow-hidden cursor-pointer light-mode:bg-white hidden" id="load-less-qari">
+                        <h3 class="p-3 text-center text-base font-medium text-white light-mode:text-gray-800">کمتر</h3>
                     </div>
                 </div>
             </section>
@@ -804,394 +549,6 @@
         </div>
     </footer>
 
-    <script>
-        // Sample song data for artists
-        const artistSongs = {
-            moein: [
-                { title: "دل دیوونه", src: "songs/moein/del-divoone.mp3", art: "images/moein.jpg" },
-                { title: "بیا بنویسیم", src: "songs/moein/bia-benevisim.mp3", art: "images/moein.jpg" }
-            ],
-            googoosh: [
-                { title: "همراه", src: "songs/googoosh/hamrah.mp3", art: "images/googoosh.jpg" }
-            ],
-            ebi: [
-                { title: "شب", src: "songs/ebi/shab.mp3", art: "images/ebi.jpg" }
-            ],
-            mahasti: [
-                { title: "دل کوچک من", src: "songs/mahasti/del-kuchak.mp3", art: "images/mahasti.jpg" }
-            ],
-            hayedeh: [
-                { title: "سوغاتی", src: "songs/hayedeh/soghati.mp3", art: "images/hayedeh.jpg" }
-            ],
-            chavoshi: [
-                { title: "قایم باشک", src: "songs/chavoshi/ghayem-bashak.mp3", art: "images/chavoshi.jpg" }
-            ],
-            hamim: [
-                { title: "رز مشکی", src: "songs/hamim/roz-meshki.mp3", art: "images/hamim.jpg" }
-            ],
-            ghomayshi: [
-                { title: "پرنده", src: "songs/ghomayshi/parandeh.mp3", art: "images/ghomayshi.jpg" }
-            ],
-            yeganeh: [
-                { title: "بهت قول میدم", src: "songs/yeganeh/behet-ghol-midam.mp3", art: "images/yeganeh.jpg" }
-            ],
-            sattar: [
-                { title: "همایون", src: "songs/sattar/homayoun.mp3", art: "images/sattar.jpg" }
-            ],
-            aslani: [
-                { title: "دیوار", src: "songs/aslani/divar.mp3", art: "images/aslani.jpg" }
-            ],
-            shadmehr: [
-                { title: "پر پرواز", src: "songs/shadmehr/par-parvaz.mp3", art: "images/shadmehr.jpg" }
-            ],
-            ragheb: [
-                { title: "آواز", src: "songs/ragheb/avaz.mp3", art: "images/ragheb.jpg" }
-            ],
-            hamidhirad: [
-                { title: "گفتم بمان", src: "songs/hamidhirad/goftam-beman.mp3", art: "images/hamidhirad.jpg" }
-            ],
-            dariush: [
-                { title: "چشمه", src: "songs/dariush/cheshmeh.mp3", art: "images/dariush.jpg" }
-            ],
-            ehsankhajehamiri: [
-                { title: "عاشق شدن", src: "songs/ehsankhajehamiri/ashogh-shodan.mp3", art: "images/ehsankhajehamiri.jpg" }
-            ],
-            rezasadeghi: [
-                { title: "بی تو", src: "songs/rezasadeghi/bi-to.mp3", art: "images/rezasadeghi.jpg" }
-            ],
-            sirvankhosravi: [
-                { title: "دوست دارم زندگی رو", src: "songs/sirvankhosravi/doost-daram-zendegi-ro.mp3", art: "images/sirvankhosravi.jpg" }
-            ],
-            benyaminbahadori: [
-                { title: "عشق در گذر", src: "songs/benyaminbahadori/eshgh-dar-gozar.mp3", art: "images/benyaminbahadori.jpg" }
-            ],
-            farzadfarzin: [
-                { title: "نفس", src: "songs/farzadfarzin/nafas.mp3", art: "images/farzadfarzin.jpg" }
-            ],
-            maziarfallahi: [
-                { title: "لیلا", src: "songs/maziarfallahi/leila.mp3", art: "images/maziarfallahi.jpg" }
-            ],
-            "mehdi_yarrahi": [
-                { title: "دیوار", src: "songs/mehdi_yarrahi/divar.mp3", art: "images/mehdi_yarrahi.jpg" }
-            ],
-            aliabdolmaleki: [
-                { title: "نفس نفس", src: "songs/aliabdolmaleki/nafas-nafas.mp3", art: "images/aliabdolmaleki.jpg" }
-            ],
-            babakjahanbakhsh: [
-                { title: "من و بارون", src: "songs/babakjahanbakhsh/man-o-baroon.mp3", art: "images/babakjahanbakhsh.jpg" }
-            ],
-            mortezapashaei: [
-                { title: "یکی هست", src: "songs/mortezapashaei/yeki-hast.mp3", art: "images/mortezapashaei.jpg" }
-            ],
-            behnambani: [
-                { title: "قرص قمر", src: "songs/behnambani/ghors-ghamar.mp3", art: "images/behnambani.jpg" }
-            ],
-            mohsenebrahimzadeh: [
-                { title: "دونه دونه", src: "songs/mohsenebrahimzadeh/dooneh-dooneh.mp3", art: "images/mohsenebrahimzadeh.jpg" }
-            ],
-            mehradjam: [
-                { title: "شمال", src: "songs/mehradjam/shomal.mp3", art: "images/mehradjam.jpg" }
-            ],
-            aliyasini: [
-                { title: "مگه چند بار زنده ای", src: "songs/aliyasini/mage-chand-bar-zendeh-i.mp3", art: "images/aliyasini.jpg" }
-            ],
-            aronafshar: [
-                { title: "شب رویایی", src: "songs/aronafshar/shab-royayi.mp3", art: "images/aronafshar.jpg" }
-            ],
-            majidrazavi: [
-                { title: "دلبر", src: "songs/majidrazavi/delbar.mp3", art: "images/majidrazavi.jpg" }
-            ],
-            moeinz: [
-                { title: "حسم بد", src: "songs/moeinz/hesam-bad.mp3", art: "images/moeinz.jpg" }
-            ],
-            naserzeynali: [
-                { title: "دلمو بردی", src: "songs/naserzeynali/delamo-bordi.mp3", art: "images/naserzeynali.jpg" }
-            ],
-            garsharezaei: [
-                { title: "موج اقیانوس", src: "songs/garsharezaei/moj-oghianoos.mp3", art: "images/garsharezaei.jpg" }
-            ],
-            roozbehbemani: [
-                { title: "خونه", src: "songs/roozbehbemani/khooneh.mp3", art: "images/roozbehbemani.jpg" }
-            ],
-            alirezaqorbani: [
-                { title: "در آن چشم‌ها", src: "songs/alirezaqorbani/dar-an-cheshma.mp3", art: "images/alirezaqorbani.jpg" }
-            ],
-            homayounshajarian: [
-                { title: "آهای خبردار", src: "songs/homayounshajarian/ahay-khabardar.mp3", art: "images/homayounshajarian.jpg" }
-            ],
-            salaraghili: [
-                { title: "ایران", src: "songs/salaraghili/iran.mp3", art: "images/salaraghili.jpg" }
-            ],
-            mohammadesfahani: [
-                { title: "نفس", src: "songs/mohammadesfahani/nafas.mp3", art: "images/mohammadesfahani.jpg" }
-            ],
-            rezayazdani: [
-                { title: "تهران", src: "songs/rezayazdani/tehran.mp3", art: "images/rezayazdani.jpg" }
-            ],
-            kavehyaghmaei: [
-                { title: "سفر", src: "songs/kavehyaghmaei/safar.mp3", art: "images/kavehyaghmaei.jpg" }
-            ],
-            mohsennamjoo: [
-                { title: "توران", src: "songs/mohsennamjoo/toran.mp3", art: "images/mohsennamjoo.jpg" }
-            ],
-            shahinnajafi: [
-                { title: "پرنده", src: "songs/shahinnajafi/parandeh.mp3", art: "images/shahinnajafi.jpg" }
-            ],
-            rastakgroup: [
-                { title: "بارون", src: "songs/rastakgroup/baroon.mp3", art: "images/rastakgroup.jpg" }
-            ],
-            damahi: [
-                { title: "داماهی", src: "songs/damahi/damahi.mp3", art: "images/damahi.jpg" }
-            ],
-            bomrani: [
-                { title: "گذشتن و رفتن پیوسته", src: "songs/bomrani/gozashtan-va-raftan-pivaste.mp3", art: "images/bomrani.jpg" }
-            ],
-            palet: [
-                { title: "مثلث", src: "songs/palet/mosalas.mp3", art: "images/palet.jpg" }
-            ],
-            chaartaar: [
-                { title: "آسمان هم زمین میخورد", src: "songs/chaartaar/aseman-ham-zamin-mikhorad.mp3", art: "images/chaartaar.jpg" }
-            ],
-            armangarshasbi: [
-                { title: "عاشقانه", src: "songs/armangarshasbi/asheghane.mp3", art: "images/armangarshasbi.jpg" }
-            ],
-            arminzarayi: [
-                { title: "نرو برادر", src: "songs/arminzarayi/naro-baradar.mp3", art: "images/arminzarayi.jpg" }
-            ],
-            asefaria: [
-                { title: "هزار و یک شب", src: "songs/asefaria/hezar-va-yek-shab.mp3", art: "images/asefaria.jpg" }
-            ],
-            ehsandaryadel: [
-                { title: "دریا", src: "songs/ehsandaryadel/darya.mp3", art: "images/ehsandaryadel.jpg" }
-            ],
-            ahmadsolo: [
-                { title: "زیبای من", src: "songs/ahmadsolo/zibaye-man.mp3", art: "images/ahmadsolo.jpg" }
-            ],
-            tehi: [
-                { title: "لالا", src: "songs/tehi/lala.mp3", art: "images/tehi.jpg" }
-            ],
-            mahranatash: [
-                { title: "آتش", src: "songs/mahranatash/atash.mp3", art: "images/mahranatash.jpg" }
-            ],
-            amiraram: [
-                { title: "آرام", src: "songs/amiraram/aram.mp3", art: "images/amiraram.jpg" }
-            ]
-        };
-
-        // Audio player setup
-        const audio = new Audio();
-        let currentPlaylist = [];
-        let currentTrackIndex = 0;
-
-        // Page load animation
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loading-overlay').classList.add('hidden');
-            }, 1000);
-        });
-
-        // Hamburger menu toggle
-        document.getElementById('hamburger-menu').addEventListener('click', () => {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-            sidebar.classList.toggle('active');
-        });
-
-        // Sidebar toggle button
-        document.getElementById('sidebar-toggle').addEventListener('click', () => {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-            sidebar.classList.toggle('active');
-        });
-
-        // Sidebar close button
-        document.getElementById('sidebar-close').addEventListener('click', () => {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.add('hidden');
-            sidebar.classList.remove('active');
-        });
-
-        // Theme toggle
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            const icon = document.getElementById('theme-toggle');
-            icon.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
-        });
-
-        // Search functionality
-        const searchInput = document.getElementById('search-input');
-        const searchLoading = document.getElementById('search-loading');
-        searchInput.addEventListener('input', () => {
-            const query = searchInput.value.trim().toLowerCase();
-            searchLoading.classList.remove('hidden');
-            setTimeout(() => {
-                document.querySelectorAll('.artist-card').forEach(card => {
-                    const artistName = card.querySelector('h3').textContent.toLowerCase();
-                    card.classList.toggle('hidden', query && !artistName.includes(query));
-                });
-                searchLoading.classList.add('hidden');
-            }, 500);
-        });
-
-        // Load more functionality for artists
-        document.getElementById('load-more').addEventListener('click', () => {
-            document.querySelectorAll('.artist-grid .artist-card.hidden').forEach(card => {
-                card.classList.remove('hidden');
-            });
-            document.getElementById('load-more').classList.add('hidden');
-            document.getElementById('load-less').classList.remove('hidden');
-        });
-
-        // Load less functionality for artists
-        document.getElementById('load-less').addEventListener('click', () => {
-            document.querySelectorAll('.artist-grid .artist-card[data-artist="ehsankhajehamiri"], .artist-grid .artist-card[data-artist="rezasadeghi"], .artist-grid .artist-card[data-artist="sirvankhosravi"], .artist-grid .artist-card[data-artist="benyaminbahadori"], .artist-grid .artist-card[data-artist="farzadfarzin"], .artist-grid .artist-card[data-artist="maziarfallahi"], .artist-grid .artist-card[data-artist="mehdi_yarrahi"], .artist-grid .artist-card[data-artist="aliabdolmaleki"], .artist-grid .artist-card[data-artist="babakjahanbakhsh"], .artist-grid .artist-card[data-artist="mortezapashaei"], .artist-grid .artist-card[data-artist="behnambani"], .artist-grid .artist-card[data-artist="mohsenebrahimzadeh"], .artist-grid .artist-card[data-artist="mehradjam"], .artist-grid .artist-card[data-artist="aliyasini"], .artist-grid .artist-card[data-artist="aronafshar"], .artist-grid .artist-card[data-artist="majidrazavi"], .artist-grid .artist-card[data-artist="moeinz"], .artist-grid .artist-card[data-artist="naserzeynali"], .artist-grid .artist-card[data-artist="garsharezaei"], .artist-grid .artist-card[data-artist="roozbehbemani"]').forEach(card => {
-                card.classList.add('hidden');
-            });
-            document.getElementById('load-more').classList.remove('hidden');
-            document.getElementById('load-less').classList.add('hidden');
-        });
-
-        // Load more functionality for video section
-        document.getElementById('load-more-video').addEventListener('click', () => {
-            document.querySelectorAll('.video-grid .artist-card.hidden').forEach(card => {
-                card.classList.remove('hidden');
-            });
-            document.getElementById('load-more-video').classList.add('hidden');
-            document.getElementById('load-less-video').classList.remove('hidden');
-        });
-
-        // Load less functionality for video section
-        document.getElementById('load-less-video').addEventListener('click', () => {
-            document.querySelectorAll('.video-grid .artist-card[data-artist="mohsennamjoo"], .video-grid .artist-card[data-artist="shahinnajafi"], .video-grid .artist-card[data-artist="rastakgroup"], .video-grid .artist-card[data-artist="damahi"], .video-grid .artist-card[data-artist="bomrani"], .video-grid .artist-card[data-artist="palet"], .video-grid .artist-card[data-artist="chaartaar"], .video-grid .artist-card[data-artist="armangarshasbi"], .video-grid .artist-card[data-artist="arminzarayi"], .video-grid .artist-card[data-artist="asefaria"], .video-grid .artist-card[data-artist="ehsandaryadel"], .video-grid .artist-card[data-artist="ahmadsolo"], .video-grid .artist-card[data-artist="tehi"], .video-grid .artist-card[data-artist="mahranatash"], .video-grid .artist-card[data-artist="amiraram"]').forEach(card => {
-                card.classList.add('hidden');
-            });
-            document.getElementById('load-more-video').classList.remove('hidden');
-            document.getElementById('load-less-video').classList.add('hidden');
-        });
-
-        // Artist card click handler
-        document.querySelectorAll('.artist-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.tagName !== 'A') {
-                    const artist = card.getAttribute('data-artist');
-                    const artistName = card.querySelector('h3').textContent;
-                    if (artistSongs[artist]) {
-                        currentPlaylist = artistSongs[artist];
-                        currentTrackIndex = 0;
-                        playTrack(currentPlaylist[currentTrackIndex], artistName);
-                        updateQueue(artistName);
-                    }
-                }
-            });
-        });
-
-        // Music player controls
-        const playPauseBtn = document.getElementById('play-pause-btn');
-        playPauseBtn.addEventListener('click', () => {
-            const isPlaying = playPauseBtn.textContent === 'پخش';
-            playPauseBtn.textContent = isPlaying ? 'توقف' : 'پخش';
-            if (isPlaying) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        });
-
-        document.getElementById('prev-btn').addEventListener('click', () => {
-            if (currentTrackIndex > 0) {
-                currentTrackIndex--;
-                playTrack(currentPlaylist[currentTrackIndex], document.getElementById('player-artist').textContent);
-            }
-        });
-
-        document.getElementById('next-btn').addEventListener('click', () => {
-            if (currentTrackIndex < currentPlaylist.length - 1) {
-                currentTrackIndex++;
-                playTrack(currentPlaylist[currentTrackIndex], document.getElementById('player-artist').textContent);
-            }
-        });
-
-        // Swipe support for music player
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const musicPlayer = document.getElementById('music-player');
-        musicPlayer.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-        musicPlayer.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            if (touchEndX - touchStartX > 50 && currentTrackIndex > 0) {
-                currentTrackIndex--;
-                playTrack(currentPlaylist[currentTrackIndex], document.getElementById('player-artist').textContent);
-            } else if (touchStartX - touchEndX > 50 && currentTrackIndex < currentPlaylist.length - 1) {
-                currentTrackIndex++;
-                playTrack(currentPlaylist[currentTrackIndex], document.getElementById('player-artist').textContent);
-            }
-        });
-
-        // Queue toggle
-        document.getElementById('queue-toggle').addEventListener('click', () => {
-            const queueList = document.getElementById('queue-list');
-            queueList.classList.toggle('active');
-        });
-
-        // Progress bar update
-        const progressBar = document.getElementById('progress-bar');
-        progressBar.addEventListener('input', () => {
-            const seekTime = (progressBar.value / 100) * audio.duration;
-            audio.currentTime = seekTime;
-        });
-
-        audio.addEventListener('timeupdate', () => {
-            const currentTime = document.getElementById('current-time');
-            const totalTime = document.getElementById('total-time');
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.value = isNaN(progress) ? 0 : progress;
-            currentTime.textContent = formatTime(audio.currentTime);
-            totalTime.textContent = formatTime(audio.duration);
-        });
-
-        audio.addEventListener('ended', () => {
-            if (currentTrackIndex < currentPlaylist.length - 1) {
-                currentTrackIndex++;
-                playTrack(currentPlaylist[currentTrackIndex], document.getElementById('player-artist').textContent);
-            } else {
-                playPauseBtn.textContent = 'پخش';
-                audio.currentTime = 0;
-                progressBar.value = 0;
-            }
-        });
-
-        function playTrack(track, artistName) {
-            audio.src = track.src;
-            audio.play();
-            document.getElementById('player-title').textContent = track.title;
-            document.getElementById('player-artist').textContent = artistName;
-            document.getElementById('player-art').src = track.art;
-            playPauseBtn.textContent = 'توقف';
-        }
-
-        function updateQueue(artistName) {
-            const queueItems = document.getElementById('queue-items');
-            queueItems.innerHTML = '';
-            currentPlaylist.forEach((track, index) => {
-                const li = document.createElement('li');
-                li.className = 'queue-item p-2 rounded cursor-pointer';
-                li.textContent = `${track.title} - ${artistName}`;
-                li.addEventListener('click', () => {
-                    currentTrackIndex = index;
-                    playTrack(track, artistName);
-                });
-                queueItems.appendChild(li);
-            });
-        }
-
-        function formatTime(seconds) {
-            if (isNaN(seconds)) return '0:00';
-            const minutes = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
