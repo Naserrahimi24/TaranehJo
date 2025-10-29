@@ -12,12 +12,10 @@
     </div>
   </header>
 
- <div class="search-bar">
-  <form action="/search" method="GET">
-    <input type="text" name="query" placeholder="جستجوی خواننده..." />
-    <button type="submit">جستجو</button>
-  </form>
-</div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="جستجوی خواننده یا آهنگ..." autocomplete="off" />
+    <div id="search-results" class="search-results"></div>
+  </div>
 
   <h1 style="margin: var(--spacing-md); font-size: var(--font-size-lg); font-weight: var(--font-weight-bold);">
     خوانندگان
@@ -37,3 +35,92 @@
     <% }) %>
   </div>
 </section>
+
+<!-- اسکریپت جستجوی زنده -->
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const input = document.getElementById("search-input");
+  const resultsBox = document.getElementById("search-results");
+
+  // خواندن داده‌ها از public/data/artists.json
+  const res = await fetch("/data/artists.json");
+  const data = await res.json();
+
+  input.addEventListener("input", e => {
+    const query = e.target.value.trim().toLowerCase();
+    resultsBox.innerHTML = "";
+    if (!query) {
+      resultsBox.style.display = "none";
+      return;
+    }
+
+    const matches = [];
+
+    // جستجو بین نام خواننده‌ها و آهنگ‌ها
+    Object.keys(data).forEach(id => {
+      const artist = data[id];
+      if (artist.name.toLowerCase().includes(query)) {
+        matches.push({
+          type: "artist",
+          name: artist.name,
+          image: artist.image,
+          id
+        });
+      }
+
+      artist.songs.forEach(song => {
+        if (song.title.toLowerCase().includes(query)) {
+          matches.push({
+            type: "song",
+            name: song.title,
+            artist: artist.name,
+            file: song.file,
+            image: artist.image
+          });
+        }
+      });
+    });
+
+    // نمایش نتایج
+    if (matches.length > 0) {
+      resultsBox.style.display = "block";
+      matches.slice(0, 15).forEach(item => {
+        const el = document.createElement("div");
+        el.className = "search-result-item";
+        el.style.padding = "8px 10px";
+        el.style.cursor = "pointer";
+        el.style.borderBottom = "1px solid #eee";
+        el.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" style="width:40px;height:40px;border-radius:8px;object-fit:cover;margin-right:8px;vertical-align:middle;">
+          <span><strong>${item.name}</strong> ${item.type === 'song' ? `- <small>${item.artist}</small>` : ''}</span>
+        `;
+        el.addEventListener("click", () => {
+          if (item.type === "artist") {
+            window.location.href = "/artist/" + item.id;
+          } else {
+            // استفاده از پخش‌کننده موجود در artist-view.js
+            if (window.smartPlayer) {
+              smartPlayer.playSong(item.file, item.name, item.artist, item.image);
+            } else {
+              alert("پخش‌کننده هنوز آماده نیست.");
+            }
+          }
+        });
+        resultsBox.appendChild(el);
+      });
+    } else {
+      resultsBox.style.display = "block";
+      resultsBox.innerHTML = "<div style='padding:10px;'>نتیجه‌ای یافت نشد.</div>";
+    }
+  });
+
+  // بستن نتایج هنگام کلیک بیرون
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".search-bar")) resultsBox.style.display = "none";
+  });
+});
+</script>
+
+<!-- پخش‌کننده -->
+<script src="/js/artist-view.js"></script>
+<audio id="global-audio"></audio>

@@ -10,13 +10,18 @@ router.get("/login", (req, res) => {
 router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
-  const ADMIN_USER = process.env.ADMIN_USER || "naserrahimi";
-  const ADMIN_PASS = process.env.ADMIN_PASS || "4700042257";
+  const ADMIN_USER = process.env.ADMIN_USER;
+  const ADMIN_PASS = process.env.ADMIN_PASS;
+
+  if (!ADMIN_USER || !ADMIN_PASS) {
+    console.error("❌ ADMIN_USER یا ADMIN_PASS در .env تعریف نشده‌اند!");
+    return res.status(500).send("خطای تنظیمات سرور");
+  }
 
   if (username === ADMIN_USER && password === ADMIN_PASS) {
     req.session.user = {
       username: ADMIN_USER,
-      display_name: "ناصر رحیمی",
+      display_name: "مدیر سیستم",
       is_admin: true,
     };
     return res.redirect("/admin/dashboard");

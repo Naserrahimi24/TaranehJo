@@ -1,6 +1,21 @@
-# فایل‌هایی که نباید آپلود بشن
-.env
-data/
+# ===== Node.js dependencies =====
 node_modules/
-*.sqlite
-*.db
+
+# ===== Environment variables (رمزها و کلیدها) =====
+.env
+
+# ===== Sensitive data =====
+data/users.json
+data/admin.json
+admin/           # اگر پوشه‌ای داری که اطلاعات ادمین داخلشه
+
+# ===== Logs =====
+*.log
+
+# ===== System / OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Temporary / backup files =====
+*.tmp
+*.bak
