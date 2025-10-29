@@ -1,0 +1,21 @@
+<section>
+  <% if (step === 1) { %>
+    <h2 class="text-xl font-bold mb-4">ثبت‌نام - وارد کردن شماره موبایل</h2>
+    <form method="POST" action="/register" class="space-y-3 max-w-sm">
+      <label class="block">شماره موبایل:
+        <input type="text" name="phone" class="border rounded p-2 w-full" required placeholder="مثال: 09123456789">
+      </label>
+      <% if (error) { %><div class="text-red-500"><%= error %></div><% } %>
+      <button type="submit" class="btn">دریافت کد تأیید</button>
+    </form>
+  <% } else if (step === 2) { %>
+    <h2 class="text-xl font-bold mb-4">تأیید شماره موبایل</h2>
+    <form method="POST" action="/verify" class="space-y-3 max-w-sm">
+      <label class="block">کد ارسال‌شده:
+        <input type="number" name="code" class="border rounded p-2 w-full" required placeholder="۴ رقم">
+      </label>
+      <% if (error) { %><div class="text-red-500"><%= error %></div><% } %>
+      <button type="submit" class="btn">تأیید و تکمیل ثبت‌نام</button>
+    </form>
+  <% } %>
+</section>

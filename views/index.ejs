@@ -1,0 +1,39 @@
+<section>
+  <header>
+    <a href="/" class="logo">🎵 ترانه‌جو</a>
+    <div>
+      <% if (!user) { %>
+        <a href="/login" class="auth-button">ورود</a>
+        <a href="/register" class="auth-button">ثبت‌نام</a>
+      <% } else { %>
+        <span class="auth-button"><%= user.display_name || user.username %></span>
+        <a href="/logout" class="auth-button">خروج</a>
+      <% } %>
+    </div>
+  </header>
+
+ <div class="search-bar">
+  <form action="/search" method="GET">
+    <input type="text" name="query" placeholder="جستجوی خواننده..." />
+    <button type="submit">جستجو</button>
+  </form>
+</div>
+
+  <h1 style="margin: var(--spacing-md); font-size: var(--font-size-lg); font-weight: var(--font-weight-bold);">
+    خوانندگان
+  </h1>
+
+  <div class="artist-grid">
+    <% Object.keys(artists).forEach(function(key) { 
+         const a = artists[key];
+    %>
+      <a href="/artist/<%= key %>" class="artist-card">
+        <img src="<%= a.image %>" alt="<%= a.name %>" style="width:100%; height:auto; border-radius: var(--border-radius-md);" />
+        <div style="padding: var(--spacing-sm); text-align:center;">
+          <h3><%= a.name %></h3>
+          <p style="font-size: var(--font-size-xs); opacity:0.8;"><%= a.desc || '' %></p>
+        </div>
+      </a>
+    <% }) %>
+  </div>
+</section>

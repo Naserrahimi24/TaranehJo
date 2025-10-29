@@ -1,0 +1,6 @@
+# فایل‌هایی که نباید آپلود بشن
+.env
+data/
+node_modules/
+*.sqlite
+*.db

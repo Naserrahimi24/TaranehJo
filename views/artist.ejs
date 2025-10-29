@@ -1,0 +1,78 @@
+<section>
+  <a href="/" class="text-sm mb-4 inline-block">بازگشت به لیست خوانندگان</a>
+
+  <div class="flex gap-6 mb-6">
+    <img src="<%= artist.image %>" alt="<%= artist.name %>" class="w-40 h-40 object-cover rounded" />
+    <div>
+      <h1 class="text-2xl font-bold"><%= artist.name %></h1>
+      <p class="mt-2 text-gray-300"><%= artist.desc %></p>
+      <% if (artist.bio) { %>
+        <p class="mt-3 text-sm text-gray-400"><%= artist.bio %></p>
+      <% } %>
+    </div>
+  </div>
+
+  <h2 class="text-xl font-semibold mb-3">آهنگ‌ها</h2>
+
+  <div id="song-list" class="space-y-3">
+    <% if (!artist.songs || artist.songs.length === 0) { %>
+      <p>هیچ آهنگی موجود نیست.</p>
+    <% } else { %>
+      <% artist.songs.forEach(function(s, idx){ 
+           const isAdminUser = user && user.username === 'naserrahimi'; 
+           const hasSubscription = user && user.subscription_end && new Date(user.subscription_end) > new Date();
+           const isUnlocked = (user && (user.is_admin || isAdminUser || hasSubscription));
+           const locked = idx >= 2 && !isUnlocked;
+      %>
+        <div class="song-item flex items-center justify-between p-3 bg-gray-800 rounded hover:bg-gray-700 transition">
+          <div class="flex items-center gap-3">
+            <% if (locked) { %>
+              <img src="/icons/lock.svg" alt="Locked" class="w-5 h-5 opacity-70" />
+            <% } %>
+            <div>
+              <div class="font-medium"><%= s.title %></div>
+              <div class="text-xs text-gray-400"><%= artist.name %></div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <% if (!locked) { %>
+              <button 
+                class="play-btn btn small" 
+                data-src="<%= s.file %>"
+                data-title="<%= s.title %>"
+                data-artist="<%= artist.name %>"
+                data-cover="<%= artist.image %>">
+                پخش
+              </button>
+
+              <!-- دکمه دانلود با پیشرفت و لغو -->
+              <div class="relative group">
+                <button 
+                  class="download-btn btn small flex items-center gap-1 text-xs transition-all"
+                  data-url="<%= s.file %>"
+                  data-title="<%= s.title %>">
+                  <svg class="w-4 h-4 download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <svg class="w-4 h-4 cancel-icon hidden text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                  <span class="download-text">دانلود</span>
+                </button>
+                <div class="download-progress absolute inset-0 h-full bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg opacity-0 transition-opacity pointer-events-none" style="width:0%"></div>
+              </div>
+            <% } else { %>
+              <button class="btn small opacity-50 cursor-not-allowed" disabled>قفل است</button>
+            <% } %>
+          </div>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+
+  <!-- audio مخفی + محاسبه مدت زمان -->
+  <audio id="global-audio" preload="metadata" style="display:none;"></audio>
+
+  <% if (!user || (!user.is_admin && user.username !== 'naserrahimi' && !(user.subscription_end && new Date(user.subscription_end) > new Date()))) { %>
+    <form id="buy-sub-form" action="/buy-sub" method="post" style="margin-top:12px;">
+      <button type="submit" class="btn">خرید اشتراک برای باز کردن همه آهنگ‌ها</button>
+    </form>
+  <% } %>
+</section>

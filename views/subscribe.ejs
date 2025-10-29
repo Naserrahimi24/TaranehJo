@@ -1,0 +1,49 @@
+<!-- views/subscribe.ejs -->
+<section class="container">
+  <a href="/" class="text-sm inline-block mb-4">← بازگشت</a>
+
+  <h1 class="text-2xl font-bold mb-4">خرید اشتراک</h1>
+  <p class="text-sm text-gray-400 mb-6">انتخاب کنید کدام پلن را می‌خواهید. بعد از پرداخت اشتراک شما فعال خواهد شد.</p>
+
+  <div class="artist-grid" style="grid-template-columns: repeat(auto-fit,minmax(220px,1fr));">
+    <div class="artist-card">
+      <div style="padding:16px;">
+        <h3 class="text-lg font-semibold">یک ماهه</h3>
+        <p class="text-sm text-gray-300">۱۰,۰۰۰ تومان</p>
+        <p class="text-xs text-gray-400 mt-2">دسترسی کامل به تمام آهنگ‌ها برای ۳۰ روز</p>
+        <form action="/subscribe/checkout" method="post" style="margin-top:12px;">
+          <input type="hidden" name="plan" value="1month" />
+          <button type="submit" class="btn">انتخاب و پرداخت</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="artist-card">
+      <div style="padding:16px;">
+        <h3 class="text-lg font-semibold">سه ماهه</h3>
+        <p class="text-sm text-gray-300">۲۴,۰۰۰ تومان</p>
+        <p class="text-xs text-gray-400 mt-2">دسترسی کامل به تمام آهنگ‌ها برای ۹۰ روز</p>
+        <form action="/subscribe/checkout" method="post" style="margin-top:12px;">
+          <input type="hidden" name="plan" value="3month" />
+          <button type="submit" class="btn">انتخاب و پرداخت</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="artist-card">
+      <div style="padding:16px;">
+        <h3 class="text-lg font-semibold">سالانه</h3>
+        <p class="text-sm text-gray-300">۹۹,۰۰۰ تومان</p>
+        <p class="text-xs text-gray-400 mt-2">دسترسی کامل به تمام آهنگ‌ها برای ۳۶۵ روز</p>
+        <form action="/subscribe/checkout" method="post" style="margin-top:12px;">
+          <input type="hidden" name="plan" value="12month" />
+          <button type="submit" class="btn">انتخاب و پرداخت</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 text-sm text-gray-400">
+    <p>نکته: در نسخهٔ آزمایشی پرداخت شبیه‌سازی می‌شود. برای پرداخت واقعی، مسیر زرین‌پال فعال شود.</p>
+  </div>
+</section>
