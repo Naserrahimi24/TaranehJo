@@ -246,9 +246,6 @@ app.get('/verify-payment', async (req, res) => {
   }
 });
 
-// ------------------------------
-// شروع سرور
-// ------------------------------
-app.listen(PORT, () => {
-  console.log(`🚀 سرور ترانه‌جو روی پورت ${PORT} اجرا شد`);
-});
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`🚀 سرور ترانه‌جو روی پورت ${port} اجرا شد`));
+
